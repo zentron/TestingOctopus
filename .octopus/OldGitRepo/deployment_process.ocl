@@ -16,3 +16,16 @@ steps "Run a Script" {
         worker_pool_variable = ""
     }
 }
+
+steps "Switch Azure Staging Deployment Slot" {
+
+    actions "Switch Azure Staging Deployment Slot" {
+        properties = {
+            Octopus.Action.Template.Id = "ActionTemplates-1"
+            Octopus.Action.Template.Version = "3"
+            SmokeTestResponseCode = "200"
+            smokeTestTimeoutSecs = "180"
+        }
+
+    }
+}
