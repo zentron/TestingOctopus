@@ -1,10 +1,10 @@
-steps "Run a Script" {
+steps "Run a Script2" {
     properties = {
         Octopus.Action.TargetRoles = "container-server"
     }
 
 
-    actions "Run a Script" {
+    actions "Run a Script2" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.RunOnServer = "false"
