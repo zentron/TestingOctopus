@@ -4,6 +4,5 @@ channels {
 }
 
 channels {
-    is_default = false
     name = "Default2"
 }
