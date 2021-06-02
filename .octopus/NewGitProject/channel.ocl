@@ -2,3 +2,8 @@ channels {
     is_default = true
     name = "Default"
 }
+
+channels {
+    is_default = false
+    name = "Default2"
+}
