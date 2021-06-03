@@ -5,11 +5,11 @@ channels {
 
 channels {
     description = ""
-    lifecycle_id = "Lifecycles-2"
-    name = "Feature"
+    name = "Empty"
 }
 
 channels {
     description = ""
-    name = "Empty"
+    lifecycle_id = "Lifecycles-2"
+    name = "Feature"
 }
