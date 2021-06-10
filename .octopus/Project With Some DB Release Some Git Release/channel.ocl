@@ -10,6 +10,6 @@ channels {
 
 channels {
     description = ""
-    lifecycle_id = "DevOnly"
+    lifecycle_id = "Lifecycles-2"
     name = "Feature"
 }
