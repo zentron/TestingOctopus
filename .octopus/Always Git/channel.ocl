@@ -6,5 +6,5 @@ channels {
 channels {
     is_default = true
     lifecycle_id = "DevOnly"
-    name = "Default"
+    name = "Default2"
 }
