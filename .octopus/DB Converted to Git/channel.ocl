@@ -1,0 +1,15 @@
+channels {
+    is_default = true
+    name = "Default"
+}
+
+channels {
+    description = ""
+    lifecycle_id = "DevOnly"
+    name = "Second Channel"
+}
+
+channels {
+    description = ""
+    name = "Another Channel"
+}
