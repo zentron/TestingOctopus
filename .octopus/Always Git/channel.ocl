@@ -4,6 +4,5 @@ channels {
 }
 
 channels {
-    lifecycle_id = "DevOnly"
     name = "JustDevEnv"
 }
