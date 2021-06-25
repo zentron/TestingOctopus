@@ -5,5 +5,6 @@ channels {
 
 channels {
     description = "x"
+    lifecycle_id = "Lifecycles-2"
     name = "Channel10"
 }
