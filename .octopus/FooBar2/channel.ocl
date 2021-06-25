@@ -4,6 +4,6 @@ channels {
 }
 
 channels {
-    description = ""
+    description = "x"
     name = "Channel10"
 }
