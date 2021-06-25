@@ -1,0 +1,17 @@
+channels {
+    is_default = true
+    name = "Default"
+}
+
+channels {
+    description = ""
+    name = "Secondary Channel"
+
+    rules {
+        tag = ""
+        version_range = "1.0.0"
+
+        deployment_action_packages "Hello world (using PowerShell)" "putty" {
+        }
+    }
+}
