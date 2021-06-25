@@ -1,8 +1,8 @@
 channels {
-    is_default = true
-    name = "Default"
+    name = "JustDevEnv"
 }
 
 channels {
-    name = "JustDevEnv"
+    is_default = true
+    name = "Default2"
 }
