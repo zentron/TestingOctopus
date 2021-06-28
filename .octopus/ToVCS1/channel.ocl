@@ -15,3 +15,9 @@ channels {
         }
     }
 }
+
+channels {
+    description = ""
+    lifecycle_id = "Lifecycles-2"
+    name = "Channel In Second Branch"
+}
