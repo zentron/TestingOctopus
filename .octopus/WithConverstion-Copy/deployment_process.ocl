@@ -1,0 +1,55 @@
+steps "Hello world (using PowerShell)" {
+
+    actions "Hello world (using PowerShell)" {
+        action_type = "Octopus.Script"
+        channels = ["Another Channel"]
+        excluded_environments = ["%!! sd"]
+        is_required = true
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                Write-Host 'Hello world, using PowerShell'
+                
+                #TODO: Experiment with steps of your own :)
+                echo #{VariableA}
+                Write-Host '[Learn more about the types of steps available in Octopus](https://g.octopushq.com/OnboardingAddStepsLearnMore)'
+            EOT
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "PowerShell"
+        }
+
+
+        packages "putty" {
+            acquisition_location = "Server"
+            feed_id_or_name = "Octopus Server (built-in)"
+            package_id = "putty"
+            properties = {
+                Extract = "True"
+                SelectionMode = "immediate"
+            }
+
+        }
+    }
+}
+
+steps "Hello world (using Bash)" {
+    start_trigger = "StartWithPrevious"
+
+    actions "Hello world (using Bash)" {
+        action_type = "Octopus.Script"
+        is_required = true
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                echo 'Hello world, using Bash'
+                
+                #TODO: Experiment with steps of your own :)
+                
+                echo '[Learn more about the types of steps available in Octopus](https://g.octopushq.com/OnboardingAddStepsLearnMore)'
+            EOT
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+        }
+
+    }
+}
