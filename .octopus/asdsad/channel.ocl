@@ -1,0 +1,9 @@
+channels {
+    is_default = true
+    name = "Default"
+}
+
+channels {
+    description = ""
+    name = "fsdfsdf"
+}
