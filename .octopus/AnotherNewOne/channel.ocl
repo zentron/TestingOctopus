@@ -7,3 +7,8 @@ channels {
     description = ""
     name = "FooBar"
 }
+
+channels {
+    description = ""
+    name = "Zoomy"
+}
