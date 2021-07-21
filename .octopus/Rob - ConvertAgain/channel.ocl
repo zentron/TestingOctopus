@@ -2,3 +2,13 @@ channels {
     is_default = true
     name = "Defaulzzzzz"
 }
+
+channels {
+    is_default = true
+    name = "Defaulzzzzz1111"
+}
+
+channels {
+    is_default = true
+    name = "Defaulzzzzz22222"
+}
