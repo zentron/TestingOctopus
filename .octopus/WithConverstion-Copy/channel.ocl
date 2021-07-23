@@ -8,10 +8,10 @@ channels {
     name = "Another Channel"
 
     rules {
-        tag = ""
+        tag = "a"
         version_range = "[1.0.0]"
 
-        deployment_action_packages "Hello world (using PowerShell)" "putty" {
+        deployment_action_packages "hello-world-using-powershell" "putty" {
         }
     }
 }
