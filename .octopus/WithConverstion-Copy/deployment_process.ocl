@@ -5,6 +5,7 @@ steps "Hello world (using PowerShell)" {
         channels = ["Another Channel"]
         excluded_environments = ["%!! sd"]
         is_required = true
+        notes = "x"
         properties = {
             Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = <<-EOT
