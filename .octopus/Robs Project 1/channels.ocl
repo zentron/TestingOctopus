@@ -1,7 +1,3 @@
 channel "Default" {
     is_default = true
 }
-
-channel "Second Channel on master" {
-    description = ""
-}
