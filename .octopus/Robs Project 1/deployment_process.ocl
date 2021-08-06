@@ -1,6 +1,6 @@
-steps "Hello world (using PowerShell)" {
+steps "Hello world (using PowerShell)z" {
 
-    actions "Hello world (using PowerShell)" {
+    actions "Hello world (using PowerShell)z" {
         action_type = "Octopus.Script"
         is_required = true
         properties = {
