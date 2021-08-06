@@ -10,6 +10,7 @@ steps "Hello world (using PowerShell)" {
                 
                 #TODO: Experiment with steps of your own :)
                 echo $MyChannel
+                echo $OctopusParameters["Another Variable"]
                 Write-Host '[Learn more about the types of steps available in Octopus](https://g.octopushq.com/OnboardingAddStepsLearnMore)'
             EOT
             Octopus.Action.Script.ScriptSource = "Inline"
