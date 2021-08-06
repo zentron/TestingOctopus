@@ -19,22 +19,3 @@ steps "Hello world (using PowerShell)" {
 
     }
 }
-
-steps "Run a Script" {
-    properties = {
-        Octopus.Action.TargetRoles = "Ham and cheese roll"
-    }
-
-
-    actions "Run a Script" {
-        action_type = "Octopus.Script"
-        properties = {
-            Octopus.Action.RunOnServer = "false"
-            Octopus.Action.Script.ScriptBody = "sadasdsad"
-            Octopus.Action.Script.ScriptSource = "Inline"
-            Octopus.Action.Script.Syntax = "PowerShell"
-        }
-
-        worker_pool_variable = ""
-    }
-}
