@@ -6,7 +6,7 @@ steps "Hello world (using PowerShell)" {
         properties = {
             Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = <<-EOT
-                Write-Host 'Hello world, using PowerShell'
+                Write-Host 'Hello world, using xPowerShell'
                 
                 #TODO: Experiment with steps of your own :)
                 
