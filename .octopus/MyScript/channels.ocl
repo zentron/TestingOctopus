@@ -1,3 +1,7 @@
 channel "Default" {
     is_default = true
 }
+
+channel "Secondary" {
+    description = ""
+}
