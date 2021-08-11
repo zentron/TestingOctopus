@@ -28,7 +28,6 @@ jobs:
             echo "CHANNEL=Default" >> $GITHUB_ENV
           else
             echo "CHANNEL=Secondary" >> $GITHUB_ENV
-          fi
-          
+          fi          
       - name: list-octopusdeploy-deployments
-        run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project=MyScript --gitref $GITHUB_REF --gitcommit $GITHUB_SHA --channel $CHANNEL
+        run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project=MyScript --gitref $GITHUB_REF --gitcommit $GITHUB_SHA --channel ${{ env.CHANNEL }}
