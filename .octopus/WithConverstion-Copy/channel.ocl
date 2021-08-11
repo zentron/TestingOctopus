@@ -8,7 +8,7 @@ channels {
     name = "Another Channe l"
 
     rules {
-        tag = "as"
+        tag = "azs"
         version_range = "[1.0.0]"
 
         deployment_action_packages "hello-world-using-powershell" "putty" {
