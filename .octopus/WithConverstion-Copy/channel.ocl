@@ -5,7 +5,7 @@ channels {
 
 channels {
     description = ""
-    name = "Another Channel"
+    name = "Another Channe l"
 
     rules {
         tag = "a"
