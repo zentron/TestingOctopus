@@ -2,6 +2,7 @@ name: listdeployments
 
 env:
   serverURL: https://robe-testing-tc.testoctopus.app/
+  if: ${{ github.ref == 'refs/heads/main' }}
 
 on:
    push:
@@ -20,6 +21,14 @@ jobs:
         uses: OctopusDeploy/install-octopus-cli-action@v1.1.1
         with:
           version: latest
+      
+      - name: Setup Variables
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/master' ]]; then
+            echo "CHANNEL=Default" >> $GITHUB_ENV
+          else
+            echo "CHANNEL=Secondary" >> $GITHUB_ENV
+          fi
           
       - name: list-octopusdeploy-deployments
-        run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project=MyScript --gitref $GITHUB_REF --gitcommit $GITHUB_SHA
+        run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project=MyScript --gitref $GITHUB_REF --gitcommit $GITHUB_SHA --channel $CHANNEL
