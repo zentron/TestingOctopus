@@ -1,0 +1,26 @@
+name: listdeployments
+
+env:
+  serverURL: your_server_name
+
+on:
+   push:
+     branches: [ main ]
+   pull_request:
+     branches: [ main ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Install Octopus CLI
+        uses: OctopusDeploy/install-octopus-cli-action@v1.1.1
+        with:
+          version: latest
+          
+      - name: list-octopusdeploy-deployments
+        run: octo list-deployments --server=${{ env.serverURL }} --apiKey=${{ secrets.apiKey }}
