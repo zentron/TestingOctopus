@@ -22,4 +22,4 @@ jobs:
           version: latest
           
       - name: list-octopusdeploy-deployments
-        run: octo list-deployments --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }}
+        run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project=MyScript --gitref $GITHUB_REF
