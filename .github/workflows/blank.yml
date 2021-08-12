@@ -30,3 +30,9 @@ jobs:
           fi          
       - name: list-octopusdeploy-deployments
         run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project=MyScript --gitcommit $GITHUB_SHA --gitref $GITHUB_REF --channel Default
+      - name: Create a release in Octopus Deploy 🐙
+        uses: OctopusDeploy/create-release-action@v1.0.6
+        with:
+          api_key: ${{ secrets.APIKEY }}
+          project: "MyScript"
+          server: ${{ env.serverURL }}
