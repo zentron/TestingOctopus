@@ -36,3 +36,5 @@ jobs:
           api_key: ${{ secrets.APIKEY }}
           project: "MyScript"
           server: ${{ env.serverURL }}
+          git_ref: $GITHUB_REF
+          git_commit: $GITHUB_SHA
