@@ -37,4 +37,4 @@ jobs:
           project: "MyScript"
           server: ${{ env.serverURL }}
           git_ref: ${{ github.ref }}
-          git_commit: $GITHUB_SHA
+          git_commit: ${{ github.sha }}
