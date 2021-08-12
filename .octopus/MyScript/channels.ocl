@@ -3,5 +3,5 @@ channel "Default" {
 }
 
 channel "Secondary" {
-    description = ""
+    description = "2"
 }
