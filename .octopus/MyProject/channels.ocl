@@ -4,5 +4,4 @@ channel "Default" {
 
 channel "DevOnly" {
     description = ""
-    lifecycle_id = "Lifecycles-2"
 }
