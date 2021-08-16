@@ -1,3 +1,8 @@
 channel "Default" {
     is_default = true
 }
+
+channel "DevOnly" {
+    description = ""
+    lifecycle_id = "Lifecycles-2"
+}
