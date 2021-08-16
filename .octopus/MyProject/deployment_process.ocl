@@ -16,6 +16,28 @@ step "Hello world (using PowerShell)" {
             Octopus.Action.Script.Syntax = "PowerShell"
         }
 
+
+        packages "RandomQuotes" {
+            acquisition_location = "Server"
+            feed = "Octopus Server (built-in)"
+            package_id = "RandomQuotes"
+            properties = {
+                Extract = "True"
+                SelectionMode = "immediate"
+            }
+
+        }
+
+        packages "RandomQuotes2" {
+            acquisition_location = "Server"
+            feed = "Octopus Server (built-in)"
+            package_id = "RandomQuotes"
+            properties = {
+                Extract = "True"
+                SelectionMode = "immediate"
+            }
+
+        }
     }
 }
 
