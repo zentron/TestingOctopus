@@ -4,6 +4,6 @@ connectivity_policy {
 versioning_strategy {
     template = ""
 
-    donor_package "Deploy a Package" "" {
+    donor_package "Hello world (using PowerShell)" "RandomQuotes2" {
     }
 }
