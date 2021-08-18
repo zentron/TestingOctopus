@@ -2,8 +2,5 @@ connectivity_policy {
 }
 
 versioning_strategy {
-    template = ""
-
-    donor_package "Deploy a Package" "" {
-    }
+    template = "#{Octopus.Version.LastMajor}.#{Octopus.Version.LastMinor}.#{Octopus.Version.NextPatch}"
 }
