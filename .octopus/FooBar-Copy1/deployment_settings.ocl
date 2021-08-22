@@ -1,7 +1,10 @@
+release_notes_template = "x"
+
 connectivity_policy {
 }
 
 versioning_strategy {
+    template = ""
 
     donor_package "Hello world (using PowerShell)" "RandomQuotes" {
     }
