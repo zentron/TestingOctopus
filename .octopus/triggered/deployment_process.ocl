@@ -1,0 +1,29 @@
+step "Hello world (using PowerShell)" {
+
+    action {
+        action_type = "Octopus.Script"
+        is_required = true
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                Write-Host 'Hello world, using PowerShell'
+                
+                #TODO: Experiment with steps of your own :)
+                
+                Write-Host '[Learn more about the types of steps available in Octopus](https://g.octopushq.com/OnboardingAddStepsLearnMore)'
+            EOT
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "PowerShell"
+        }
+
+        packages "RandomQuotes" {
+            acquisition_location = "Server"
+            feed = "Octopus Server (built-in)"
+            package_id = "RandomQuotes"
+            properties = {
+                Extract = "True"
+                SelectionMode = "immediate"
+            }
+        }
+    }
+}
