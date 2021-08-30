@@ -5,6 +5,6 @@ versioning_strategy {
 
     donor_package {
         package = "RandomQuotes"
-        step = "Hello world (using PowerShell)"
+        step = "Hello world (using PowerShell)2"
     }
 }
