@@ -1,5 +1,0 @@
-channels {
-    is_default = true
-    lifecycle_id = "Lifecycles-2"
-    name = "Default"
-}

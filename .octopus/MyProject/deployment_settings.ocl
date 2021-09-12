@@ -1,9 +1,0 @@
-connectivity_policy {
-}
-
-versioning_strategy {
-    template = ""
-
-    donor_package "Hello world (using PowerShell)af" "RandomQuotes2" {
-    }
-}
