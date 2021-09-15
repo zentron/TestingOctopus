@@ -9,6 +9,9 @@ step "Hello world (using PowerShell)" {
             Octopus.Action.Script.ScriptBody = <<-EOT
                 Write-Host 'Hello world, using PowerShell'
                 
+                echo $OctopusParameters["Octopus.Release.Git.Ref"]
+                echo $OctopusParameters["Octopus.Release.Git.BranchName"]
+                echo $OctopusParameters["Octopus.Release.Git.CommitHash"]
                 #TODO: Experiment with steps of your own :)
                 
                 Write-Host '[Learn more about the types of steps available in Octopus](https://g.octopushq.com/OnboardingAddStepsLearnMore)'
