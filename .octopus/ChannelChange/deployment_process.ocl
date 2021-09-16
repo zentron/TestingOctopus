@@ -1,4 +1,4 @@
-step "Hello world (using PowerShell)" {
+step "Hello world (using PowerShell)d" {
 
     action {
         action_type = "Octopus.Script"
