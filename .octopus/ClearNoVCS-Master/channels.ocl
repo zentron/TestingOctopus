@@ -1,0 +1,8 @@
+channel "Default" {
+    is_default = true
+}
+
+channel "fooby dooby" {
+    description = ""
+    lifecycle = "Just Dev"
+}
