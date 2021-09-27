@@ -1,3 +1,15 @@
+step "Manual Intervention Required" {
+
+    action {
+        action_type = "Octopus.Manual"
+        properties = {
+            Octopus.Action.Manual.BlockConcurrentDeployments = "False"
+            Octopus.Action.Manual.Instructions = "sadfsadf"
+            Octopus.Action.Manual.ResponsibleTeamIds = "Everyone,Octopus Administrators"
+        }
+    }
+}
+
 step "Hello world (using PowerShell)" {
 
     action {
@@ -48,18 +60,6 @@ step "Hello world (using Bash)" {
             EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
-        }
-    }
-}
-
-step "Manual Intervention Required" {
-
-    action {
-        action_type = "Octopus.Manual"
-        properties = {
-            Octopus.Action.Manual.BlockConcurrentDeployments = "False"
-            Octopus.Action.Manual.Instructions = "sadfsadf"
-            Octopus.Action.Manual.ResponsibleTeamIds = "Everyone,Octopus Administrators"
         }
     }
 }
