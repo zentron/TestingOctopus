@@ -1,21 +1,9 @@
-step "Manual Intervention Required" {
-
-    action {
-        action_type = "Octopus.Manual"
-        notes = "sss"
-        properties = {
-            Octopus.Action.Manual.BlockConcurrentDeployments = "False"
-            Octopus.Action.Manual.Instructions = "sadfsadf"
-            Octopus.Action.Manual.ResponsibleTeamIds = "Everyone,Octopus Administrators"
-        }
-    }
-}
-
 step "Hello world (using PowerShell)" {
 
     action {
         action_type = "Octopus.Script"
         channels = ["Default", "Second Channal!!!"]
+        environments = ["Dev", "Staging"]
         is_required = true
         properties = {
             Octopus.Action.RunOnServer = "true"
