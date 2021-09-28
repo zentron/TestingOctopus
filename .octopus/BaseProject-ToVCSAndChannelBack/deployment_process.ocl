@@ -2,6 +2,7 @@ step "Manual Intervention Required" {
 
     action {
         action_type = "Octopus.Manual"
+        notes = "sss"
         properties = {
             Octopus.Action.Manual.BlockConcurrentDeployments = "False"
             Octopus.Action.Manual.Instructions = "sadfsadf"
