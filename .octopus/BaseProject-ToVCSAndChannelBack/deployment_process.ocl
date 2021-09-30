@@ -63,3 +63,31 @@ step "Deploy a Release" {
         }
     }
 }
+
+step "Deploy a Package" {
+    properties = {
+        Octopus.Action.TargetRoles = "foobar"
+    }
+
+    action {
+        action_type = "Octopus.TentaclePackage"
+        properties = {
+            Octopus.Action.EnabledFeatures = ",Octopus.Features.ConfigurationTransforms,Octopus.Features.ConfigurationVariables"
+            Octopus.Action.Package.AutomaticallyRunConfigurationTransformationFiles = "False"
+            Octopus.Action.Package.AutomaticallyUpdateAppSettingsAndConnectionStrings = "False"
+            Octopus.Action.Package.DownloadOnTentacle = "False"
+            Octopus.Action.Package.FeedId = "Octopus Server (built-in)"
+            Octopus.Action.Package.PackageId = "putty"
+        }
+        worker_pool_variable = ""
+
+        packages {
+            acquisition_location = "Server"
+            feed = "Octopus Server (built-in)"
+            package_id = "putty"
+            properties = {
+                SelectionMode = "immediate"
+            }
+        }
+    }
+}
