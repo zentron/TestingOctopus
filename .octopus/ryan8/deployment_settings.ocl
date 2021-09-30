@@ -1,0 +1,20 @@
+release_notes_template = <<-EOT
+        Here are the notes for the packages
+        #{each package in Octopus.Release.Package}
+        - #{package.PackageId} #{package.Version}
+        #{each commit in package.Commits}
+            - [#{commit.CommitId}](#{commit.LinkUrl}) - #{commit.Comment}
+        #{/each}
+        #{/each}
+    EOT
+
+connectivity_policy {
+}
+
+versioning_strategy {
+
+    donor_package {
+        package = "c2b23698-49ba-42f6-b777-a0e1efedc09a"
+        step = "e9a45eee-84cc-4f60-ad62-69689a8730ea"
+    }
+}
