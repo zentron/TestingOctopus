@@ -23,7 +23,6 @@ step "Hello world (using Bash)" {
 
     action {
         action_type = "Octopus.Script"
-        is_disabled = true
         is_required = true
         properties = {
             Octopus.Action.RunOnServer = "true"
