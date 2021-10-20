@@ -1,0 +1,22 @@
+step "Deploy Amazon ECS Service" {
+    package_requirement = "AfterPackageAcquisition"
+    properties = {
+        Octopus.Action.TargetRoles = "Bread"
+    }
+
+    action {
+        action_type = "aws-ecs"
+        step_package_version = "1.0.1"
+        worker_pool_variable = ""
+
+        inputs {
+        }
+
+        packages "busybox" {
+            acquisition_location = "NotAcquired"
+            feed = "Docker Hub"
+            package_id = "busybox"
+            step_package_inputs_reference_id = "6a8fd5af-bc87-469c-82ff-92f445b13110"
+        }
+    }
+}
