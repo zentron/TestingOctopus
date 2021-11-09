@@ -2,6 +2,7 @@ step "Hello world (using PowerShell)" {
 
     action {
         action_type = "Octopus.Script"
+        environments = ["Dev"]
         is_required = true
         notes = "sss"
         properties = {
