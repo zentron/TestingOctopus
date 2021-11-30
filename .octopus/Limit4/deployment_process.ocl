@@ -4,7 +4,7 @@ step "Hello world (using PowerShell)" {
         action_type = "Octopus.Script"
         environments = ["Devzz"]
         is_required = true
-        notes = "sss"
+        notes = "sssss"
         properties = {
             Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = <<-EOT
