@@ -2,4 +2,9 @@ connectivity_policy {
 }
 
 versioning_strategy {
+
+    donor_package {
+        package = "busybox"
+        step = "Hello world (using Bash)"
+    }
 }
