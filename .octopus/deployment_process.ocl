@@ -36,5 +36,16 @@ step "Hello world (using Bash)" {
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
         }
+
+        packages "busybox" {
+            acquisition_location = "Server"
+            feed = "Public DockerHub Feed"
+            package_id = "busybox"
+            properties = {
+                Extract = "True"
+                Purpose = ""
+                SelectionMode = "immediate"
+            }
+        }
     }
 }
