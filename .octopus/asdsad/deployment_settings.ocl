@@ -1,3 +1,4 @@
+deployment_changes_template = "ss"
 release_notes_template = "r"
 
 connectivity_policy {
