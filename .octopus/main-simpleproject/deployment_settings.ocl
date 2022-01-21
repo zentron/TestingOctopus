@@ -1,3 +1,5 @@
+release_notes_template = "X"
+
 connectivity_policy {
 }
 
