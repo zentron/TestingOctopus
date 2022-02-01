@@ -8,7 +8,7 @@ step "Hello world (using PowerShell)" {
             Octopus.Action.Script.ScriptBody = <<-EOT
                 Write-Host 'Hello world, using PowerShell'
                 
-                #TODO: Experiment with steps of your own :)ddd
+                #TODO: Experiment with steps of your own :)dddxxx
                 
                 Write-Host '[Learn more about the types of steps available in Octopus](https://g.octopushq.com/OnboardingAddStepsLearnMore)'
             EOT
