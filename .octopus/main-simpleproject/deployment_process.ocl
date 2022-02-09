@@ -38,3 +38,15 @@ step "Hello world (using Bash)" {
         }
     }
 }
+
+step "sadfsadf" {
+
+    action {
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Template.Id = "ActionTemplates-1"
+            Octopus.Action.Template.Version = "1"
+        }
+        worker_pool = "Default Worker Pool"
+    }
+}
