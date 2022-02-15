@@ -4,7 +4,7 @@ step "Run a Script" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.RunOnServer = "true"
-            Octopus.Action.Script.ScriptBody = "ECHO Foo From Branch"
+            Octopus.Action.Script.ScriptBody = "EsCHO Foo From Branch"
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
         }
