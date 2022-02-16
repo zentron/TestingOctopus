@@ -29,12 +29,12 @@ jobs:
             echo "CHANNEL=Secondary" >> $GITHUB_ENV
           fi          
       - name: list-octopusdeploy-deployments
-        run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project=MyScript --gitcommit $GITHUB_SHA --gitref $GITHUB_REF --channel Default --version 1.0.${{github.run_number}}-githubraw
+        run: octo create-release --server=${{ env.serverURL }} --apiKey=${{ secrets.APIKEY }} --project="Testing CI Tool" --gitcommit $GITHUB_SHA --gitref $GITHUB_REF --channel Default --version 1.0.${{github.run_number}}-githubraw
       - name: Create a release in Octopus Depxloy 🐙
         uses: OctopusDeploy/create-release-action@v1.0.6
         with:
           api_key: ${{ secrets.APIKEY }}
-          project: "MyScript"
+          project: "Testing CI Tool"
           server: ${{ env.serverURL }}
           git_ref: ${{ github.ref }}
           git_commit: ${{ github.sha }}
