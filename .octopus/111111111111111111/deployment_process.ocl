@@ -87,6 +87,9 @@ step "Deploy Amazon ECS Service" {
                     readOnlyRootFileSystem = false
                 }
 
+                environmentVariables {
+                }
+
                 healthCheck {
                 }
 
