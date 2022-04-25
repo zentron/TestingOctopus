@@ -1,6 +1,6 @@
-step "Hello world (using PowerShell)x" {
+step "FakeTest" {
 
-    action {
+    action "Hello world (using PowerShell)x" {
         action_type = "Octopus.Script"
         is_required = true
         properties = {
