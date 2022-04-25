@@ -1,6 +1,6 @@
 step "FakeTest" {
 
-    action "Hello world (using PowerShell)x" {
+    action "GooPar" {
         action_type = "Octopus.Script"
         is_required = true
         properties = {
