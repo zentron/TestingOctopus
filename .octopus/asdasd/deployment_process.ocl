@@ -1,6 +1,6 @@
 step "FakeTest" {
 
-    action "GooPar" {
+    action "FakeAction" {
         action_type = "Octopus.Script"
         is_required = true
         properties = {
