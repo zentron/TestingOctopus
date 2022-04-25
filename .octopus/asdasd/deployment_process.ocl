@@ -1,6 +1,6 @@
 step "FakeTest" {
 
-    action "FakeAction" {
+    action "XXXXXXX" {
         action_type = "Octopus.Script"
         is_required = true
         properties = {
