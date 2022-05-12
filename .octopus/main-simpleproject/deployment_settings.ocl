@@ -1,7 +1,0 @@
-release_notes_template = "XXXX"
-
-connectivity_policy {
-}
-
-versioning_strategy {
-}
